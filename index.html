@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Projekt 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rezepte.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1 class="title" onclick="window.location.href='https://brwski685.github.io/Portfolio/';">Elia Stamm</h1>
+        
+        <div class="buttonClass">
+            <button class="button3" id="portfolio" onclick="window.location.href='https://brwski685.github.io/Projekte/';">PROJEKTE</button>
+        <button class="button3" id="home" type="button">FOTOGRAFIEN<a href=""></a></button>
+        <button class="button3" id="Kontakte" type="button">KONTAKT<a href=""></a></button>
+        </div>
+
+
+    </div>
+
+    <div class="container1">
+        <div class="main">
+            <h1 id="title">Der Rezeptindividualisator</h1>
+            <p id="p1">Individualisiere ein Rezept deiner Wahl</p>
+            
+            <!--- <div class="seiteLinks"></div> --->
+    
+            <div class="container2">
+                <p id="titleRechner" >Personen-Rechner</p>
+    
+                <div id="inputId">
+                    <input type="text" placeholder="Von...Personen" class="inputClass" id="vonPersonen">
+                    <input type="text" placeholder="Zu...Personen" class="inputClass" id="zuPersonen">
+                    <input type="text" placeholder="Menge (Zahl)" class="inputClass" id="menge">
+    
+                    <Select id="auswahlBox" class="button" onchange="selectValue()">
+                        <option value="">---</option>
+                        <option value="kg">Kilogramm</option>
+                        <option value="g">Gramm</option>
+                        <option value="mg">Milligramm</option>
+                        <option value="l">Liter</option>
+                        <option value="cl">Zentiliter</option>
+                        <option value="ml">Milliliter</option>
+                        <option value="TL">TL</option>
+                        <option value="EL">EL</option>
+                        <option value="Pkg">Päckchen</option>
+                        <option value="Tr">Tropfen</option>
+                        <option value="Bd">Bund</option>
+                        <option value="Dose">Dose</option>
+                    </Select>
+    
+                    <input type="text" placeholder="Zutat" class="inputClass" id="zutat">
+
+                    <br><br>
+                    
+                    <button id="hinzufügen" class="button" onclick="hinzufügen()">Hinzufügen</button>
+    
+                    <button class="button2" onclick="deleteListItem()">Eintrag löschen</button>
+    
+                    <button class="button" onclick="window.location.reload(true)()">Neustart</button>
+                </div>
+    
+            </div>
+    
+            <div class="container3">
+                <p id="titleAnweisung">Zubereitung</p>
+    
+                <textarea type="text" placeholder="Kochanweisungen ggf. einfügen..." class="inputAnweisung" id="anweisung"></textarea>
+
+                <br><br>
+    
+                <button class="button" onclick="hinzufügenAnweisung()">Hinzufügen</button>
+    
+                <button class="button2" onclick="deleteAnweisung()">Eintrag löschen</button>
+    
+            </div>
+
+            <div class="container4">
+                <p1 id="titleListe" onclick="myfunc()">Neues Rezept</p1>
+    
+                <br><br>
+    
+                <div class="mainZutaten">
+                    <p1 id="titleZutaten">Zutaten</p1>
+                    <ul id="mainUl"></ul>
+                </div>
+               
+                <div class="mainZubereitung">
+                    <p1 id="titleZubereitung">Zubereitung</p1>
+                    <ol id="zubereitungList">
+    
+                    </ol>
+                </div>
+    
+                <br>
+                <p2 id="titleListe2" onclick="myfunc_2()">für ... Personen</p2>
+            </div>
+    
+    
+    
+        </div>
+    </div>
+    <script src="rezepte.js"></script>
+</body>
+</html>
